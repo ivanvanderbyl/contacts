@@ -18,3 +18,4 @@ end
 gem 'jquery-rails'
 gem 'ember-rails'
 gem "active_model_serializers"
+gem 'decent_exposure'

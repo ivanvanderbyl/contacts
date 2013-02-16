@@ -49,6 +49,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    decent_exposure (2.0.0)
     ember-rails (0.9.2)
       active_model_serializers
       barber
@@ -136,6 +137,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.1.0)
   coffee-rails (~> 3.2.1)
   compass-rails
+  decent_exposure
   ember-rails
   jquery-rails
   rails (= 3.2.11)
