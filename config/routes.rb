@@ -1,3 +1,17 @@
 Contacts::Application.routes.draw do
-  root :to => "interface#index"
+  class FormatTest
+    attr_accessor :mime_type
+
+    def initialize(format)
+      @mime_type = Mime::Type.lookup_by_extension(format)
+    end
+
+    def matches?(request)
+      request.format == mime_type
+    end
+  end
+
+  # resources :Contacts, :except => [:edit, :new], :constraints => FormatTest.new(:json)
+  # get '*foo', :to => 'interface#index', :constraints => FormatTest.new(:html)
+  get '/', :to => 'interface#index', :constraints => FormatTest.new(:html)
 end
