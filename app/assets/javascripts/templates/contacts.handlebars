@@ -1,0 +1,7 @@
+<ul class="contacts nav nav-list">
+{{#each contact in controller}}
+  <li class="contact">{{#linkTo "contact" contact}}{{contact.fullName}}{{/linkTo}}</li>
+{{/each}}
+</ul>
+
+{{#linkTo "contacts.new" class="btn btn-green"}}New Contact{{/linkTo}}
