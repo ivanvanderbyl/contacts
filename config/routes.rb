@@ -11,7 +11,10 @@ Contacts::Application.routes.draw do
     end
   end
 
-  # resources :Contacts, :except => [:edit, :new], :constraints => FormatTest.new(:json)
-  # get '*foo', :to => 'interface#index', :constraints => FormatTest.new(:html)
+  namespace :api, :defaults => {:format => 'json'} do
+    resources :contacts, :except => [:edit, :new], :constraints => FormatTest.new(:json)
+  end
+
+  get '*foo', :to => 'interface#index', :constraints => FormatTest.new(:html)
   get '/', :to => 'interface#index', :constraints => FormatTest.new(:html)
 end
