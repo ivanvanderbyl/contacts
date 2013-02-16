@@ -1,6 +1,6 @@
 @import "compass/reset";
 @import "bootstrap";
-/*@import "compass/css3";*/
+@import "compass/css3";
 
 body, html {
   margin: 0;
@@ -15,6 +15,13 @@ body, html {
   top: 0;
   bottom: 0;
   width: 30%;
+
+  background: darken(white, 5%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  // border-right: 1px solid darken(white, 8%);
+  @include box-shadow(rgba(black, 0.5) 1px 0 1px -1px);
+
 }
 
 .container {
@@ -26,9 +33,37 @@ body, html {
 }
 
 ul.contacts {
+  margin: 0;
+  padding: 0;
+
   li.contact {
-    a.active {
-      font-weight: bold;
+    background: darken(white, 2%);
+    margin-bottom: 2px;
+    position: relative;
+    cursor: default;
+
+    a {
+      display: block;
+      padding: 1.5em 2em;
+      color: black;
+
+      span.email {
+        color: rgba(black, 0.5);
+      }
+
+      &:hover {
+        background: white;
+      }
+
+      &.active {
+        @include background(linear-gradient(top, #83C5F0 0%, darken(#83C5F0, 8%) 100%) no-repeat);
+        color: white;
+        text-shadow: none;
+
+        span.email {
+          color: rgba(white, 0.5);
+        }
+      };
     }
   }
 }
