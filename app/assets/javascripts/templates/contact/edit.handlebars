@@ -14,12 +14,12 @@
 
 <div class="control">
   <label class="control-label">Email</label>
-  {{view Contacts.SmartTextField valueBinding="controller.email" placeholderCompletionBinding="firstName"}}
+  {{view Contacts.SmartTextField valueBinding="controller.email" placeholderCompletionBinding="firstName" action="saveChanges"}}
 </div>
 
 <div class="control">
   <label class="control-label">Phone Number</label>
-  {{view Ember.TextField valueBinding="controller.phoneNumber" placeholder="+61 XXXX XXX XXX"}}
+  {{view Ember.TextField valueBinding="controller.phoneNumber" placeholder="+61 XXXX XXX XXX" action="saveChanges"}}
 </div>
 
 <div class="actions">
