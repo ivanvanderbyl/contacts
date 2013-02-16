@@ -1,0 +1,13 @@
+
+<h1>{{controller.fullName}}</h1>
+
+<dl>
+  <dt>Email</dt>
+  <dd>{{#if email}}{{email}}{{else}}(Empty){{/if}}</dd>
+
+  <dt>Phone number</dt>
+  <dd>{{phoneNumber}}</dd>
+</dl>
+
+{{#linkTo "contact.edit" classNames="btn"}}Edit{{/linkTo}}
+<button class="btn btn-danger" {{action deleteContact}}>Delete</button>
