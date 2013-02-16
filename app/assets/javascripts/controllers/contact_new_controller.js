@@ -20,7 +20,6 @@ Contacts.ContactsNewController = Ember.ObjectController.extend({
         transaction = this.get('transaction'),
         self = this;
 
-    transaction.rollback();
     contact.deleteRecord();
     this.target.transitionTo('contacts');
   },
