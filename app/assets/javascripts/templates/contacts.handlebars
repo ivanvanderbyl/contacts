@@ -1,6 +1,11 @@
 <ul class="contacts nav nav-list">
 {{#each contact in controller}}
-  <li class="contact">{{#linkTo "contact" contact}}{{contact.fullName}}{{/linkTo}}</li>
+  <li class="contact">
+    {{#linkTo "contact" contact}}
+      <span class="name">{{contact.fullName}}</span>
+      {{#if contact.email}}<span class="email">{{contact.email}}</span>{{/if}}
+    {{/linkTo}}
+  </li>
 {{/each}}
 </ul>
 
