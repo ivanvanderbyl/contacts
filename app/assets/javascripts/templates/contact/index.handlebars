@@ -6,7 +6,7 @@
   <dd>{{#if email}}{{email}}{{else}}(Empty){{/if}}</dd>
 
   <dt>Phone number</dt>
-  <dd>{{phoneNumber}}</dd>
+  <dd>{{#if phoneNumber}}{{phoneNumber}}{{else}}(Empty){{/if}}</dd>
 </dl>
 
 {{#linkTo "contact.edit" classNames="btn"}}Edit{{/linkTo}}
