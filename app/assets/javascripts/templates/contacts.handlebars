@@ -1,0 +1,10 @@
+<ul class="contacts">
+  {{#each contact in controller}}
+    <li class="contact">
+      {{#linkTo "contact" contact}}
+      <span class="name">{{contact.fullName}}</span>
+      <span class="email">{{contact.email}}</span>
+      {{/linkTo}}
+    </li>
+  {{/each}}
+</ul>
