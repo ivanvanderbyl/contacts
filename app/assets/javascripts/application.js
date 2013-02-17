@@ -27,6 +27,10 @@ Contacts.Store = DS.Store.extend({
 //   adapter: DS.FixtureAdapter.create()
 // });
 
+Contacts.Router.reopen({
+  location: 'history'
+});
+
 Contacts.Router.map(function() {
   this.resource('contacts', function() {
     this.route('new');
