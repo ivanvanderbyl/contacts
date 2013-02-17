@@ -1,0 +1,10 @@
+<h1>{{fullName}}</h1>
+
+<dl>
+  <dt>Email</dt>
+  <dd>{{#if email}}{{email}}{{else}}(Empty){{/if}}</dd>
+  <dt>Phone Number</dt>
+  <dd>{{#if phoneNumber}}{{phoneNumber}}{{else}}(empty){{/if}}</dd>
+</dl>
+
+{{#linkTo "contact.edit" classNames="btn"}}Edit{{/linkTo}}

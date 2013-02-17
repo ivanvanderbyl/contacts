@@ -8,13 +8,14 @@ Contacts.Contact = DS.Model.extend({
     var firstName = this.get('firstName'),
         lastName = this.get('lastName');
 
+    if (!firstName) {
+      firstName = 'Test'
+    };
+
+    if (!lastName) {
+      lastName = 'Test'
+    };
+
     return "%@ %@".fmt(firstName, lastName);
   }.property('firstName', "lastName")
 });
-
-Contacts.Contact.FIXTURES = [{
-  id: 1,
-  firstName: "Ivan",
-  lastName: 'Vanderbyl',
-  email: 'ivan@crashlog.io'
-}]

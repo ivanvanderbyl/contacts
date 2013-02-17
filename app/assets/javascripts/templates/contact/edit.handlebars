@@ -1,0 +1,27 @@
+<h1>Edit Contact</h1>
+
+<div class="control-group">
+  <label class="field">First name</label>
+  <div class="control">
+    {{view Ember.TextField valueBinding="firstName" placeholder="First name"}}
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="field">Last name</label>
+  <div class="control">
+    {{view Ember.TextField valueBinding="lastName"}}
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="field">Email</label>
+  <div class="control">
+    {{view Contacts.SmartTextField valueBinding="email" autocompleteBinding="firstName"}}
+  </div>
+</div>
+
+<div class="actions">
+  <button class="btn btn-primary" {{action saveChanges}}>Save changes</button>
+  <button class="btn" {{action discardChanges}}>Cancel</button>
+</div>
